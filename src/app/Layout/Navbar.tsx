@@ -1,5 +1,7 @@
 "use client";
 
+import NavButton from "@/components/custom-ui/NavButton";
+import NavUser from "@/components/custom-ui/NavUser";
 import ProjectLogo from "@/components/custom-ui/ProjectLogo";
 import Social from "@/components/custom-ui/Social";
 import Link from "next/link";
@@ -13,7 +15,12 @@ export default function Navbar({}: Props) {
   const isActive = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = [{ name: "Blogs", href: "/blogs" }];
+  const isLogin = true;
+
+  const navItems = [
+    { name: "Blogs", href: "/blogs" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -32,7 +39,7 @@ export default function Navbar({}: Props) {
         </button>
       </div>
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-4 transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-2 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:static md:flex md:flex-row md:bg-transparent md:translate-x-0 md:h-auto md:w-auto`}
       >
@@ -56,13 +63,14 @@ export default function Navbar({}: Props) {
             {item.name}
           </Link>
         ))}
-        <Link
-          href={isActive === "/auth/login" ? "/auth/register" : "/auth/login"}
-          className="border-slate-600 flex gap-2 items-center justify-center hover:scale-105 transition-all ease-in-out duration-300 border-1 border bg-transparent w-auto px-4 py-2 font-medium rounded-sm"
-          onClick={closeMenu}
-        >
-            {isActive === "/auth/login" ? "Sign Up" : "Sign In"}
-        </Link>
+        {isLogin ? (
+          <NavUser
+          imageSrc="https://github.com/shadcn.png"
+          imageTitle="John Doe"
+        />
+        ) : (
+          <NavButton isActive={isActive} closeMenu={closeMenu} />
+        )}
         <Social />
       </div>
     </div>

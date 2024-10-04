@@ -31,7 +31,7 @@ export default function ProjectLogo({
             width={width || 80}
             height={height || 80}
           />
-          <div className="h-10 w-[2px] bg-black" />
+          <div className="h-10 w-[2px] bg-white" />
         </>
       )}
       <Link href="/">

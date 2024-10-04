@@ -19,7 +19,7 @@ export default function Home() {
           alt="Banner"
           layout="fill"
           objectFit="cover"
-          className="object-center rounded-lg z-0"
+          className="object-center rounded-lg z-0 shadow-2xl"
         />
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <ProjectLogo 

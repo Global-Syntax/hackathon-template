@@ -26,15 +26,13 @@ export default function Footer({}: Props) {
 
   return (
       <>
-        <div className="w-full h-auto md:h-28 py-4 md:pb-0 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="w-full bg-slate-900 text-white h-auto md:h-28 rounded-t-xl p-4 md:pb-0 flex flex-col md:flex-row items-center justify-between gap-4 animate-bg">
         {pathname !== "" ? <ProjectLogo /> : ""}
           <div className="flex flex-col items-center justify-center gap-2">
             <h3 className="text-lg md:text-2xl">{pageName}</h3>
             <p className="text-sm md:text-xs text-opacity-50">
-              &copy; {year}, Developed by{" "}
-              <Link className="underline" href="https://xanderbilla.com">
-                Xander Billa
-              </Link>
+              &copy; {year},
+              <span className="font-medium">Team Debug Dynasty</span>
             </p>
           </div>
         </div>
