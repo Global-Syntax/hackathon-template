@@ -8,7 +8,7 @@ type IconKeys = keyof typeof Icons;
 
 export default function Social({}: Props) {
   const socialLinks: { icon: IconKeys; href: string }[] = [
-    { icon: "gitHub", href: "https://github.com/xanderbilla" },
+    { icon: "gitHub", href: "https://github.com/Global-Syntax/hackathon-template" },
   ];
 
   return (

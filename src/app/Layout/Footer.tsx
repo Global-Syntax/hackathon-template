@@ -4,10 +4,6 @@ import ProjectLogo from "@/components/custom-ui/ProjectLogo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import Social from "../../components/custom-ui/Social";
-import Heading from "@/components/ui/heading";
-import Image from "next/image";
-
 type Props = {};
 
 export default function Footer({}: Props) {
@@ -29,17 +25,19 @@ export default function Footer({}: Props) {
   )?.title;
 
   return (
-    <div className="w-full h-20 flex flex-col md:flex-row items-center justify-between gap-4">
-    <ProjectLogo/>
-      <div className="flex flex-col items-center justify-center gap-2">
-        <h3 className="text-lg md:text-2xl">{pageName}</h3>
-        <p className="text-sm md:text-xs text- opacity-50">
-          &copy; {year}, Developed by{" "}
-          <Link className="underline" href="https://xanderbilla.com">
-            Xander Billa
-          </Link>
-        </p>
-      </div>
-    </div>
+      <>
+        <div className="w-full h-20 pb-4 md:pb-0 flex flex-col-reverse md:flex-row items-center justify-between gap-4">
+        {pathname !== "" ? <ProjectLogo /> : ""}
+          <div className="flex flex-col items-center justify-center gap-2">
+            <h3 className="text-lg md:text-2xl">{pageName}</h3>
+            <p className="text-sm md:text-xs text-opacity-50">
+              &copy; {year}, Developed by{" "}
+              <Link className="underline" href="https://xanderbilla.com">
+                Xander Billa
+              </Link>
+            </p>
+          </div>
+        </div>
+      </>
   );
 }

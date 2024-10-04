@@ -13,8 +13,8 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Xander Billa",
-  description: "Portfolio of Xander Billa",
+  title: "Home",
+  description: "This is the home page of the project.",
 };
 
 export default function RootLayout({

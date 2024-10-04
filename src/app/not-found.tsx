@@ -1,15 +1,18 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
 
 type Props = {};
 
+export const metadata: Metadata = {
+  title: "Error!",
+  description: "This is an error page.",
+};
+
 export default function NotFound({}: Props) {
   return (
     <main>
-      <Image src="/images/404.svg" alt="404" width={600} height={600} />
-      <h1 className="text-2xl text-center font-semibold text-slate-500">
-        Content Unavailable!
-      </h1>
+      <Image src="/images/not-found.png" alt="404" width={480} height={480} />
     </main>
   );
 }

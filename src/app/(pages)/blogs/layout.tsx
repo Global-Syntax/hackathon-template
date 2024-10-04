@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Blogs | Xander Billa",
+  title: "Blogs",
   description: "I write what I've learned so other people can learn from it too.",
 };
 
