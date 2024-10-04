@@ -6,23 +6,40 @@ import { twMerge } from "tailwind-merge";
 interface Props {
   onlyProjectLogo?: boolean;
   className?: string;
+  width?: number;
+  height?: number;
 }
 
-export default function ProjectLogo({ onlyProjectLogo, className }: Props) {
+export default function ProjectLogo({
+  onlyProjectLogo,
+  className,
+  width,
+  height,
+}: Props) {
   return (
-    <div className={twMerge(`flex items-center justify-center gap-8`, className)}>
+    <div
+      className={twMerge(
+        `flex flex-row-reverse items-center justify-center gap-8`,
+        className
+      )}
+    >
       {onlyProjectLogo ? null : (
         <>
-          <Image src="/images/logo.png" alt="AWS Logo" width={60} height={60} />
-          <div className="h-10 w-[2px] bg-white" />
+          <Image
+            src="/images/logo.png"
+            alt="AWS Logo"
+            width={width || 80}
+            height={height || 80}
+          />
+          <div className="h-10 w-[2px] bg-black" />
         </>
       )}
       <Link href="/">
         <Image
           src="/images/amplify.png"
           alt="AWS Amplify Logo"
-          width={90}
-          height={90}
+          width={width || 80}
+          height={height || 80}
         />
       </Link>
     </div>

@@ -26,7 +26,7 @@ export default function Footer({}: Props) {
 
   return (
       <>
-        <div className="w-full h-20 pb-4 md:pb-0 flex flex-col-reverse md:flex-row items-center justify-between gap-4">
+        <div className="w-full h-auto md:h-28 py-4 md:pb-0 flex flex-col md:flex-row items-center justify-between gap-4">
         {pathname !== "" ? <ProjectLogo /> : ""}
           <div className="flex flex-col items-center justify-center gap-2">
             <h3 className="text-lg md:text-2xl">{pageName}</h3>

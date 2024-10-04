@@ -31,7 +31,7 @@ export default function Page({}: Props) {
             </span>
           ))}
         </div>
-        <p className="mt-8 border-b border-slate-600 text-xl font-medium text-slate-300">
+        <p className="mt-8 border-b border-slate-600 text-xl font-medium text-slate-500">
           {createdDate}
         </p>
 

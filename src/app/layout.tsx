@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`max-h-screen relative min-h-screen bg-slate-900 text-zinc-100 ${urbanist.className}`}
+        className={`max-h-screen relative min-h-screen text-zinc-900 ${urbanist.className}`}
       >
         <div className="background-gradient absolute inset-0 z-40 py-8 px-8 md:px-24">
           <Navbar />
