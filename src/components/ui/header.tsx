@@ -27,7 +27,7 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({
 }) => (
   <div className="hidden md:h-20 md:flex items-center justify-between">
     <ProjectLogo onlyProjectLogo />
-    <div className="hidden md:flex items-center gap-4">
+    <div className="hidden md:flex items-center gap-2">
       {navItems.map((item, index) => (
         <Link
           key={index}
