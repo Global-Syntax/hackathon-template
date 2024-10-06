@@ -31,7 +31,7 @@ export default function RootLayout({
           <Navbar />
           <div
             className={cn(
-              `min-h-[calc(100vh-14rem)] flex flex-col items-center justify-center gap-8 ${cn}`
+              `min-h-[calc(100vh-16rem)] lg:min-h-[calc(100vh-13rem)] md:min-h-[calc(100vh-11rem)] flex flex-col items-center justify-center gap-8 ${cn}`
             )}
           >
             {children}
