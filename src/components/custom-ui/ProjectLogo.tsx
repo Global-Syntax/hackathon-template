@@ -17,31 +17,33 @@ export default function ProjectLogo({
   height,
 }: Props) {
   return (
-    <div
-      className={twMerge(
-        `flex flex-row-reverse items-center justify-center gap-8`,
-        className
-      )}
-    >
-      {onlyProjectLogo ? null : (
-        <>
+    <div className="flex flex-col items-center justify-center gap-2">
+      <div
+        className={twMerge(
+          `flex flex-row-reverse items-center justify-center gap-8`,
+          className
+        )}
+      >
+        {onlyProjectLogo ? null : (
+          <>
+            <Image
+              src="/images/logo.png"
+              alt="AWS Logo"
+              width={width || 80}
+              height={height || 80}
+            />
+            <div className="h-10 w-[2px] bg-white" />
+          </>
+        )}
+        <Link href="/">
           <Image
-            src="/images/logo.png"
-            alt="AWS Logo"
+            src="/images/amplify.png"
+            alt="AWS Amplify Logo"
             width={width || 80}
             height={height || 80}
           />
-          <div className="h-10 w-[2px] bg-white" />
-        </>
-      )}
-      <Link href="/">
-        <Image
-          src="/images/amplify.png"
-          alt="AWS Amplify Logo"
-          width={width || 80}
-          height={height || 80}
-        />
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }

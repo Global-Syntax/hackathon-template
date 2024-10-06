@@ -3,7 +3,6 @@
 import NavButton from "@/components/custom-ui/NavButton";
 import NavUser from "@/components/custom-ui/NavUser";
 import ProjectLogo from "@/components/custom-ui/ProjectLogo";
-import Social from "@/components/custom-ui/Social";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
@@ -15,7 +14,7 @@ export default function Navbar({}: Props) {
   const isActive = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const isLogin = true;
+  const isLogin = !true;
 
   const navItems = [
     { name: "Blogs", href: "/blogs" },
@@ -71,7 +70,6 @@ export default function Navbar({}: Props) {
         ) : (
           <NavButton isActive={isActive} closeMenu={closeMenu} />
         )}
-        <Social />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import ProjectLogo from "@/components/custom-ui/ProjectLogo";
-import Link from "next/link";
+import Social from "@/components/custom-ui/Social";
 import { usePathname } from "next/navigation";
 import React from "react";
 type Props = {};
@@ -16,7 +16,6 @@ export default function Footer({}: Props) {
     { path: "/projects", title: "Projects" },
   ];
 
-  const year = new Date().getFullYear();
   const pathname = usePathname().split("/")[1] || "";
   const path = pathname.charAt(0).toUpperCase() + pathname.slice(1);
 
@@ -26,14 +25,10 @@ export default function Footer({}: Props) {
 
   return (
       <>
-        <div className="w-full bg-slate-900 text-white h-auto md:h-28 rounded-t-xl p-4 md:pb-0 flex flex-col md:flex-row items-center justify-between gap-4 animate-bg">
+        <div className="w-full bg-slate-900 text-white h-auto md:h-40 rounded-t-xl p-4 md:pb-0 flex flex-col md:flex-row items-center justify-between gap-4 animate-bg">
         {pathname !== "" ? <ProjectLogo /> : ""}
           <div className="flex flex-col items-center justify-center gap-2">
-            <h3 className="text-lg md:text-2xl">{pageName}</h3>
-            <p className="text-sm md:text-xs text-opacity-50">
-              &copy; {year},
-              <span className="font-medium">Team Debug Dynasty</span>
-            </p>
+            <Social/>
           </div>
         </div>
       </>

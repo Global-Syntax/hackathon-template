@@ -5,7 +5,6 @@ import Footer from "@/app/Layout/Footer";
 import Navbar from "@/app/Layout/Navbar";
 import { cn } from "@/lib/utils";
 import React from "react";
-import { AlertNotification } from "@/components/custom-ui/AlertNotification";
 
 const urbanist = Urbanist({
   subsets: ["latin"],

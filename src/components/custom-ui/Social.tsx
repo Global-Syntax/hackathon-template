@@ -1,30 +1,50 @@
-import { Icons } from "@/components/ui/icons";
-import Link from "next/link";
 import React from "react";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import {
+  IconBrandDiscord,
+  IconBrandGithub,
+  IconBrandX,
+  IconExchange,
+  IconHome,
+  IconNewSection,
+  IconTerminal2,
+} from "@tabler/icons-react";
 
-type Props = {};
-
-type IconKeys = keyof typeof Icons;
-
-export default function Social({}: Props) {
-  const socialLinks: { icon: IconKeys; href: string }[] = [
-    { icon: "gitHub", href: "https://github.com/Global-Syntax/hackathon-template" },
+export default function Socail() {
+  const year = new Date().getFullYear();
+  const links = [
+   
+    {
+      title: "Twitter",
+      icon: (
+        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Discord",
+      icon: (
+        <IconBrandDiscord className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
   ];
-
   return (
-    <div className="flex items-center justify-center">
-      {socialLinks.map((social, index) => (
-        <Link
-          key={index}
-          href={social.href}
-          className="cursor-pointer m-2"
-          passHref
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {React.createElement(Icons[social.icon], { className: "h-8 w-8" })}
-        </Link>
-      ))}
+    <div className="flex flex-col items-center justify-center h-auto w-full">
+      <FloatingDock
+        mobileClassName="translate-y-20" // only for demo, remove for production
+        items={links}
+      />
+      <p className="text-sm md:text-md text-opacity-50">
+          &copy; {year},<span className="font-medium">Team Debug Dynasty</span>
+        </p>
     </div>
   );
 }
