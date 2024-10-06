@@ -10,6 +10,20 @@ Welcome to the Next.js Hackathon Starter Template! This project is designed to h
 - ✅ Blog Page
 - ⬜ Sign In
 
+## UI Endpoints
+
+| Endpoint                  | Description            |
+|---------------------------|------------------------|
+| `/`                       | Home                   |
+| `/auth/login`             | Login                  |
+| `/auth/register`          | Register               |
+| `/auth/forgot-password`   | Forgot Password        |
+| `/auth/reset-password`    | Reset Password         |
+| `/blog`                   | Blogs                  |
+| `/blog/{slug}`            | Blog Post              |
+| `/contact`                | Contact                |
+| `/profile`                | Profile                |
+
 ## Quick Start
 
 To get started with the template:
