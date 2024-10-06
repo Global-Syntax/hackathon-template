@@ -3,6 +3,8 @@
 import NavButton from "@/components/custom-ui/NavButton";
 import NavUser from "@/components/custom-ui/NavUser";
 import ProjectLogo from "@/components/custom-ui/ProjectLogo";
+import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/ui/icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
@@ -64,12 +66,23 @@ export default function Navbar({}: Props) {
         ))}
         {isLogin ? (
           <NavUser
-          imageSrc="https://github.com/shadcn.png"
-          imageTitle="John Doe"
-        />
+            imageSrc="https://github.com/shadcn.png"
+            imageTitle="John Doe"
+          />
         ) : (
           <NavButton isActive={isActive} closeMenu={closeMenu} />
         )}
+        <div className="mx-2 flex items-center justify-center gap-2">
+          <Button variant="outline" className="h-10 w-10 rounded-full p-2 transition-all duration-300 ease-in-out">
+            <Icons.search className="h-7 w-7 text-black" />
+          </Button>
+          <Link
+            href="https://github.com/shadcn"
+            className="hover:scale-105 rounded-full p-2 hover:bg-slate-300/50 transition-all duration-300 ease-in-out"
+          >
+            <Icons.gitHub className="h-7 w-7 text-black" />
+          </Link>
+        </div>
       </div>
     </div>
   );

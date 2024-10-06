@@ -9,6 +9,7 @@ import {
   IconNewSection,
   IconTerminal2,
 } from "@tabler/icons-react";
+import { Icons } from "../ui/icons";
 
 export default function Socail() {
   const year = new Date().getFullYear();
@@ -24,7 +25,7 @@ export default function Socail() {
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Icons.gitHub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },

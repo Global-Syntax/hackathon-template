@@ -31,15 +31,15 @@ export default function Page() {
       title: "Success",
       description: "You have successfully logged in!",
     });
-    setTimeout(() => router.push("/dashboard"), 2000);
+    setTimeout(() => router.push("/profile"), 2000);
   };
 
   return (
     <div className="w-full flex min-h-96 items-center justify-center dark:bg-gray-900 p-4">
       <div className="w-full max-w-4xl flex flex-col-reverse md:flex-row rounded-lg shadow-md overflow-hidden">
-        <div className="w-full md:w-1/2 bg-white dark:bg-gray-800 p-8">
+        <div className="w-full md:w-2/2 bg-white dark:bg-gray-800 p-8">
           <div className="space-y-2 text-center">
-            <Heading title="Login" size="lg" tag="h1" className="mb-4" />
+            <Heading title="Get Started!" size="lg" tag="h1" className="mb-2" />
             <span className="text-sm md:text-base text-gray-500 dark:text-gray-400">Enter your email below to login to your account
             </span>
           </div>
@@ -49,7 +49,7 @@ export default function Page() {
               <Input
                 id="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder="user@email.com"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -68,13 +68,13 @@ export default function Page() {
             </div>
             <div className="flex justify-end">
               <Link
-                href="/forget-password"
+                href="/auth/forgot-password"
                 className="text-sm text-blue-800 font-semibold"
               >
                 Forgot password?
               </Link>
             </div>
-            <Button className="w-full" type="submit" disabled={isLoading}>
+            <Button className="w-full text-lg h-12 font-medium" type="submit" disabled={isLoading}>
               {isLoading && (
                 <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
               )}
