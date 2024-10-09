@@ -13,7 +13,7 @@ export default function PostBtn({}: Props) {
       className="w-full flex flex-col max-w-auto h-auto items-start justify-between gap-4 border-b border-[#f0f0f0] pb-4
       "
     >
-      <Heading title="Blogs" size="xl" tag="h1" className="mb-2"/>
+      <Heading title="Blogs" size="lg" tag="h1" className="mb-2"/>
       <span className="mb-8 text-lg">
         I write what I&apos;ve learned so other people can learn from it too.
       </span>

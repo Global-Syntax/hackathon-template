@@ -25,13 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`max-h-screen relative min-h-screen bg-slate-900 text-zinc-100 ${urbanist.className}`}
+        className={`max-h-screen relative min-h-screen text-zinc-900 ${urbanist.className}`}
       >
         <div className="background-gradient absolute inset-0 z-40 py-8 px-8 md:px-24">
           <Navbar />
           <div
             className={cn(
-              `min-h-[calc(100vh-14rem)] flex flex-col items-center justify-center gap-8 ${cn}`
+              `min-h-[calc(100vh-16rem)] lg:min-h-[calc(100vh-13rem)] md:min-h-[calc(100vh-11rem)] flex flex-col items-center justify-center gap-8 ${cn}`
             )}
           >
             {children}

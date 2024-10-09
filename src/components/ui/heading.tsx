@@ -19,7 +19,7 @@ export default function Heading({
   tag = "h1",
 }: Props & DefaultProps) {
   const headingClasses = twMerge(
-    `font-[800] leading-tight tracking-tight text-slate-300
+    `font-[800] leading-tight tracking-tight text-slate-500
         ${
           size === "sm"
             ? "text-2xl md:text-3xl"
