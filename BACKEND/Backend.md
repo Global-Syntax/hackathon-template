@@ -64,7 +64,7 @@ REQUEST BODY:
 ```
 
 
-### `POST:/auth/api/login
+### `POST:/auth/api/login`
 
 REQUEST BODY:
 ```
