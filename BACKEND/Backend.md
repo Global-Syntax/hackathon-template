@@ -55,7 +55,7 @@ const fetchPosts = async () => {
 ### `POST:/auth/api/register`
 
 REQUEST BODY:
-```JSON
+```
 {
   "username": "",
   "email": "",
@@ -67,7 +67,7 @@ REQUEST BODY:
 ### `POST:/auth/api/login
 
 REQUEST BODY:
-```JSON
+```
 {
   "email": "",
   "password": ""
@@ -77,7 +77,7 @@ REQUEST BODY:
 ### `POST:/auth/api/reset-password`
 
 REQUEST BODY:
-```JSON
+```
 {
   "email": ""
 }
@@ -86,7 +86,7 @@ REQUEST BODY:
 ### `GET:/auth/api/getProfile`
 
 RESPONSE BODY:
-```JSON
+```
 {
     "profile": {
         "_id": " ",
@@ -111,7 +111,7 @@ RESPONSE BODY:
 ### `POST:/api/posts/`
 
 REQUEST BODY:
-```JSON
+```
 {
   "title": "",
   "content": ""
@@ -121,7 +121,7 @@ REQUEST BODY:
 ### `GET:/api/posts/`
 
 RESPONSE BODY:
-```JSON
+```
 [
 
     {
